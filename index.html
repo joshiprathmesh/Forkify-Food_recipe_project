@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forkify App</title>
+    <link href="style.css" rel="stylesheet" >
+    <link href="responsive.css" rel="stylesheet" >
+</head>
+<body>
+    <article class="container">
+        <header class="header">
+            <div class="logo">
+            <img class="logo_img" src="logo.png"/>
+            </div>
+            <div>
+                <form class="search">
+                    <input name="searchbar" class="input_field" type="text" placeholder="Serach over 1,000,000 recipes..."/>
+                    <button class="search_tab">SEARCH</button>
+                </form>
+            </div>
+            <nav>
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <button class="nav__btn nav__btn--addrecipe"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                              </svg>
+                              
+                            <span> Add Recipe</span>
+                        </button>
+
+                       </li>
+                    <li class="nav_item">
+                        <button class="nav__btn nav__btn--bookmarks"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                              </svg>
+                               
+                            <span> Bookmarks</span> 
+                        </button>
+                        <div class="bookmarks">
+                            <ul class="bookmarks_list">
+                                <div class="error">
+                                    <p class="message">No bookmark found</p>
+                                </div>
+                                                               
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main class="search_results">
+            <div class="search_result">
+                <ul class="results">
+                    <!-- <a href="#5ed6604591c37cdc054bc886">Recipe 1</a>
+                    <a href="#664c8f193e7aa067e94e8454">Recipe 2</a> -->
+                    <!-- <li class="preview">
+                        <a class="preview__link preview__link--active" href="#664c8f193e7aa067e94e8610">
+                          <figure class="preview__fig">
+                            <img class="preview__fig_" src="http://forkify-api.herokuapp.com/images/BBQChickenPizzawithCauliflowerCrust5004699695624ce.jpg" alt="Cauliflower Pizza Crust (with BBQ Chicken Pizza)"/>
+                          </figure>
+                          <div class="preview__data">
+                            <h3 class="preview__title">Cauliflower Pizza Crust (with BBQ Chicken Pizza)</h3>
+                            <p class="preview__publisher">Closet Cooking</p>
+                           <div class="preview__user-generated hidden">
+
+                            </div> 
+                          </div> 
+                        </a>
+                    </li> 
+                    <li class="preview">
+                        <a class="preview__link preview__link--active" href="#664c8f193e7aa067e94e8610">
+                            <figure class="preview__fig">
+                            <img class="preview__fig_" src="http://forkify-api.herokuapp.com/images/BBQChickenPizzawithCauliflowerCrust5004699695624ce.jpg" alt="Cauliflower Pizza Crust (with BBQ Chicken Pizza)">
+                            </figure>
+                            <div class="preview__data">
+                            <h4 class="preview__title">Cauliflower Pizza Crust (with BBQ Chicken Pizza)</h4>
+                            <p class="preview__publisher">Closet Cooking</p>
+   
+                            </div>
+                        </a>
+                    </li>
+                    -->
+                </ul>
+            </div>
+            
+            <div class="recipes_feed"> 
+                <div class="Welcome_page">
+                    <p class="welcome_message">
+                        <svg class="welcome_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                        </svg>
+                       Start by searching for a recipe or an ingredient. Have fun!
+                    </p>
+                </div>
+                <!-- 
+                <div class="spinner">
+                    <img class="loading_icon" src="./src/loading (1).svg">
+                </div> -->
+
+                
+                <!-- <figure class="recipe__fig">
+                        <img src="http://forkify-api.herokuapp.com/images/steakhousepizza0b87.jpg" class="recipe__img"/>
+                </figure>
+                <h1 class="recipe__title"><span>Pasta with creame sauce</span></h1>
+                <div class="recipe__details">
+                    <div class="recipe__info">
+                        <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <span class="recipe__info-data-minutes">45 
+                        <span class="recipe__info-data-text">mintues</span>
+                    </div>
+                    <div class="serving__info">
+                        <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                          </svg>                          
+                        <span class="recipe__info-data-minutes">1 
+                        <span class="recipe__info-data-text">people</span>
+                    </div>
+                    <div class="bookmark__info">
+                        <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                          </svg>
+                    </div>
+                </div>
+
+                <div class="ingridents_info">
+                    <h2 class="ingridents_title heading__2">Recipe Ingridents</h2>
+                    <ul class="ingrident__list">
+                        <li class="ingrident__item">
+                            <svg class="recipe__info-icon right__tick_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                              </svg>
+                              <div class="item_unit">1</div>
+                              <div class="item__name">teaspoon (SCANT) Active Dry Yeast</div>
+                        </li>
+                        <li class="ingrident__item">
+                            <svg class="recipe__info-icon right__tick_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                              </svg>
+                              <div class="item_unit">3/4</div>
+                              <div class="item__name"> cups Warm Water</div>
+                        </li>                    
+                    </ul>
+                </div>
+
+                <div class="recipe__directions">
+                    <h2 class="heading__2">How to cook it</h2>
+                    <p class="recipe__direction-text">This recipe was carefully designed and tested by Closet Cooking. Please check out directions at their website.</p>
+                    <a class="btn--small recipe__btn direction_button" href="http://www.closetcooking.com/2013/02/cauliflower-pizza-crust-with-bbq.html" target="_blank">
+                        <span>Directions</span>
+                        <svg class="direction_arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg> 
+                      </a>
+                </div> -->
+                        
+            </div> 
+
+        </main>
+        <div class="pagination">
+                    
+            <!-- <button class="pagination_window hidden forward">
+                <span class="page_text">Page</span>
+                <span class="next_page_number">3</span>
+                <svg class="next_arrow_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>              
+            </button>
+            <button class="pagination_window hidden backward">
+                <svg class="previous_arrow_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+                <span class="page_text">Page</span>
+                <span class="previous_page_number">2</span>
+            </button> -->
+         </div>
+   
+
+    </article>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
